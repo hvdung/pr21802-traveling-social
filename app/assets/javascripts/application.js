@@ -18,6 +18,4 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require cocoon
-//= require main.min
-//= require script
 //= require_tree .
