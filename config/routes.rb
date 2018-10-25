@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     end
     resources :profiles, only: :show
     resources :locations
+    resources :cities, only: [:show, :index]
+    resources :cities, only: :show do
+      resources :locations, only: [:index, :show]
+    end
   end
 end
