@@ -1,0 +1,62 @@
+= render "layouts/user-header"
+section
+  .gap.gray-bg
+    .container-fluid
+      .row
+        .col-lg-12
+          #page-contents.row
+            .col-lg-3
+              = render "layouts/left-sidebar" 
+            .col-lg-6
+              = render "shared/error_msg"
+              .central-meta
+                .frnds
+                  ul.nav.nav-tabs
+                    li.nav-item
+                      a[href="#frends" data-toggle="tab"]
+                        | Followers
+                      span
+                        | 55
+                    li.nav-item
+                      a.active.show[href="#frends-req" data-toggle="tab"]
+                        | Followings
+                      span
+                        | 60
+                  .tab-content
+                    #frends.tab-pane.fade
+                      ul.nearby-contct
+                        - @followers.each do |follower|
+                          li
+                            .nearly-pepls
+                              figure
+                                a[href="time-line.html" title=""]
+                                  = image_tag follower.thumbnail.present? ? follower.thumbnail_url : "avatar.png"
+                              .pepl-info
+                                h4
+                                  a[href="time-line.html" title=""]
+                                    = follower.email
+                                span
+                                  | ftv model
+                                a.add-butn.more-action[href="#" title="" data-ripple=""]
+                                  | unfriend
+                                a.add-butn[href="#" title="" data-ripple=""]
+                                  | add friend
+                    #frends-req.tab-pane.fade.active.show
+                      ul.nearby-contct
+                        li
+                          .nearly-pepls
+                            figure
+                              a[href="time-line.html" title=""]
+                                img[src="images/resources/nearly5.jpg" alt=""]
+                            .pepl-info
+                              h4
+                                a[href="time-line.html" title=""]
+                                  | Amy watson
+                              span
+                                | ftv model
+                              a.add-butn.more-action[href="#" title="" data-ripple=""]
+                                | delete Request
+                              a.add-butn[href="#" title="" data-ripple=""]
+                                | Confirm
+            .col-lg-3
+              = render "layouts/right-sidebar" 

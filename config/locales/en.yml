@@ -62,7 +62,8 @@ en:
       photos: "Photos"
       reviews: "Reviews"
       about: "About"
-      follow: "Follow"
+      followers: " Followers"
+      followings: " Followings"
   admin:
     locations:
       index: 

@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_locale
   layout :layout_by_resource
+  include Pagy::Backend
 
   private
 
@@ -19,5 +20,9 @@ class ApplicationController < ActionController::Base
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_path, alert: exception.message
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    root_path
   end
 end

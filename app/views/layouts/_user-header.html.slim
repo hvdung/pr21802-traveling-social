@@ -1,12 +1,19 @@
+-if @user.present?
 section
   .feature-photo
     figure
       = image_tag @user.cover.present? ? @user.cover_url : "1366x400.png"
     .add-btn
-      span
-        | 1205 followers
-      a[href="#" title="" data-ripple=""]
-        = t ".follow"
+      .follow-count
+        span.follower-count 
+          = @user.followers_count
+          = t ".followers"
+        span.following-count
+          = @user.follow_count
+          = t ".followings"
+      - if user_signed_in?
+        #follow_user
+          = render partial: "users/follow", locals: {user: @user}
     form.edit-phto
       i.fa.fa-camera-retro
       label.fileContainer
@@ -36,4 +43,4 @@ section
                   = t ".reviews"
                 a[href="timeline-friends.html" title="" data-ripple=""]
                   = t ".follow"
-                = link_to t(".about"), user_path(current_user)
+                = link_to t(".about"), about_user_path(current_user)
