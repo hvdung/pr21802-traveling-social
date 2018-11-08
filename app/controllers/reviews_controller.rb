@@ -26,6 +26,7 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @location = Location.friendly.find params[:location_id]
   end
 
   def edit
