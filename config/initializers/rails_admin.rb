@@ -161,6 +161,10 @@ RailsAdmin.config do |config|
     visible false
   end
 
+  config.model AverageCache do
+    visible false
+  end
+
   config.model MicroPost do
     label "Status" 
     label_plural "Status"

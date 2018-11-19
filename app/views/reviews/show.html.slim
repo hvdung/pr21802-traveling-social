@@ -4,7 +4,7 @@
       = @review.name
 .gap.gray-bg
   .row#page-contents.justify-content-center
-    .col-lg-10
+    .col-lg-8
       .central-meta.item-show-review
         .user-post
           .friend-info
@@ -16,7 +16,7 @@
                   = link_to @review.user.email, user_path(@review.user)
               span
                 = t ".published" 
-                = @review.created_at
+                = @review.created_at.strftime("%Y-%m-%d")
             .we-video-info
               ul.meta-total
                 li

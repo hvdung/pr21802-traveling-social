@@ -42,6 +42,9 @@ body.rails_admin{
       }
     }
   }
+  .table > thead > tr > th.thumbnail_field {
+    width: 10%;
+  }
 
   .content{
     border-radius: 5px;
@@ -136,7 +139,7 @@ body.rails_admin{
         margin-right: 0;
         color: #fff!important;
         border-radius: 0;
-        background-image: linear-gradient(#428bca , #5bc0de);
+        background: #428bca;
         padding: 0 30px;;
         line-height: 40px;
         height: 40px;

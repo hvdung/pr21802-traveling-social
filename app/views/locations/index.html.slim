@@ -6,13 +6,15 @@
   #page-contents.row.justify-content-center
     .col-lg-8
       - if params[:city_id].present?
-        .central-meta.padding-50
+        a.btn.read-more[data-toggle="collapse" href="#collapseContent" role="button" aria-expanded="false" aria-controls="collapseContent"]
+          = t ".city-read-more"
+        .central-meta.padding-50.collapse#collapseContent
           h3.title-show-location
             = @city.name
           .content-show-location
             = raw @city.description
           - if @city.address.present?
-            #map[data=eval(@city.address)["location"]]
+            #map[data=(@city.address)["location"]]
       - if @locations.try :suggestions
         .location-suggestions
           = t ".do-you-mean"

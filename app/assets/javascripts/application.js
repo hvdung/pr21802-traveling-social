@@ -55,6 +55,16 @@ $(document).on("turbolinks:load", function () {
     }
   })
 
+  //Sticky header
+  var stickyHeaderTop = $('.topbar').offset().top;
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > stickyHeaderTop) {
+      $('.topbar').addClass("sticky");
+    } else {
+      $('.topbar').removeClass("sticky");
+    }
+  });
+
   // Auotocomplete location status
   $autocomplete = function () {
     $auto = $(".checkin-location").autocomplete({

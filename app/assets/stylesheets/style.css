@@ -15,7 +15,7 @@
  p {
   font-size: 14px;
   line-height: 26px;
-  color: #8c8b8b;
+  color: #252525;
 }
  a,
 a:hover,
@@ -1785,7 +1785,6 @@ footer .logo{
   float: right;
 }
 .followers{
-  max-height: 260px;
   position: relative;
 }
 .followers > li figure {

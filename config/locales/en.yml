@@ -33,7 +33,7 @@ en:
       more_pages: "More Pages"
       placeholder-location: "Type location here..."
     footer:
-      copy_right: "© Winku 2018. All rights reserved."
+      copy_right: "Dũng - Thơ. All rights reserved."
     application:
       language: "Language"
       en: "English"
@@ -273,10 +273,12 @@ en:
       rate: "Rate: "
     index:
       all-locations: "All locations"
+      location-popular: "Popular"
       location-review: "Total reviews: "
       location-checkin: "Total check-in: "
       location-rate: "Location rate: "
       do-you-mean: "Do you mean "
+      city-read-more: "Show city description"
   cities:
     index:
       cities: "List of cities"

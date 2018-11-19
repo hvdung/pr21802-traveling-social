@@ -3,15 +3,16 @@ aside.sidebar.static
     h4.widget-title
       = t ".who-following"
     ul.followers
-      - @list_following.each do |following|
-        li
-          figure
-            = link_to user_path following.id do
-              = image_tag following.thumbnail.present? ? following.thumbnail_url : "avatar.png"
-          .friend-meta
-            h4
+      - if @list_following.present?
+        - @list_following.each do |following|
+          li
+            figure
               = link_to user_path following.id do
-                - if following.first_name.present?
-                  = following.first_name + " " + following.last_name
-                - else
-                  = following.email
+                = image_tag following.thumbnail.present? ? following.thumbnail_url : Settings.avatar
+            .friend-meta
+              h4
+                = link_to user_path following.id do
+                  - if following.first_name.present?
+                    = "#{following.first_name} #{following.last_name}"
+                  - else
+                    = following.email

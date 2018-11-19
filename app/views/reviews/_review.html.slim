@@ -12,10 +12,13 @@
           li
             = link_to user_path(review.user) do
               i.fas.fa-user
-              = review.user.email
+              - if review.user.first_name.present?
+                = "#{review.user.first_name} #{review.user.last_name}"
+              - else
+                = review.user.email
           li
             i.far.fa-calendar-alt
-            = review.created_at
+            = review.created_at.strftime("%Y-%m-%d")
         .we-video-info
           ul.meta-total
             li
