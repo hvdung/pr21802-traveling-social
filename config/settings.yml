@@ -13,3 +13,4 @@ images:
   per_page: 50
 micro_posts:
   per_page: 20
+avatar: "avatar.png"

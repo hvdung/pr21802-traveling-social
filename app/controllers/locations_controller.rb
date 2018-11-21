@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     else
       @pagy, @locations = pagy Location.includes(:city), 
         items: Settings.locations.per_page
-      @locations = @locations.search_location params[:s] if params[:s].present?
+      @locations_json = @locations.search_location params[:s] if params[:s].present?
 
       if params[:q].nil?
         @pagy, @locations = pagy Location.includes(:city), 

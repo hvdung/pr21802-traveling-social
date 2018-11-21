@@ -22,6 +22,13 @@ a{
       box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
       opacity: 0.8;
     }
+    &.read-more{
+      margin-top: 0;
+      margin-bottom: 20px;
+      &:hover,&:focus{
+        color: #fff;
+      }
+    }
 }
 .status-btn{
   font-size: 12px;
@@ -151,6 +158,10 @@ label{
       opacity: 1;
       visibility: visible;
     }
+  }
+  &.sticky{
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -348,7 +359,7 @@ label.review_thumbnail{
 
 @media screen and (min-width: 576px){
   .central-meta .card-deck .card{
-    flex: 1 0 20%;
+    flex: 1 0 25%;
   }
 }
 
@@ -432,6 +443,8 @@ label.review_thumbnail{
   margin-bottom: 10px;
 }
 #map{
+  margin-top: 40px;
+  margin-bottom: 20px;
   width: 100%;
   height: 400px;
 }
@@ -631,4 +644,9 @@ label.review_thumbnail{
   .card{
     margin-bottom: 10px;
   }
+}
+.alert-notice{
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+  color: #31708f;
 }

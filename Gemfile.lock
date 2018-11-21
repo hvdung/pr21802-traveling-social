@@ -155,8 +155,6 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
-    groupdate (4.1.0)
-      activesupport (>= 4.2)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -222,8 +220,6 @@ GEM
     omniauth (1.8.1)
       hashie (>= 3.4.6, < 3.6.0)
       rack (>= 1.6.2, < 3)
-    omniauth-facebook (5.0.0)
-      omniauth-oauth2 (~> 1.2)
     omniauth-google-oauth2 (0.5.3)
       jwt (>= 1.5)
       omniauth (>= 1.1.1)
@@ -233,7 +229,7 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     owlcarousel-rails (2.2.3.5)
-    pagy (1.0.0)
+    pagy (1.1.0)
     paranoia (2.4.1)
       activerecord (>= 4.0, < 5.3)
     popper_js (1.14.5)
@@ -405,14 +401,12 @@ DEPENDENCIES
   figaro
   friendly_id
   gmaps4rails
-  groupdate
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
   mini_magick
   mysql2
   omniauth
-  omniauth-facebook
   omniauth-google-oauth2
   owlcarousel-rails
   pagy
@@ -441,4 +435,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.6
+   1.16.3
